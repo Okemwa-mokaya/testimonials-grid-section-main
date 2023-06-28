@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-rayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+svg{
+  max-width: 100%;
+  display: block;
+}
+body{
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: var(--Light-grayish-blue);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 1rem;
+}
+.testimonial-grid{
+  display: grid;
+  grid-template-areas: 1fr;
+  gap: 1.5rem;
+  padding-block: 2rem;
+  margin: 1rem;
+}
+.item1{
+  background-color: var(--Moderate-violet);
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px hsl(219, 29%, 14%, 25%);
+}
+.item1 .quotes{
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 1.5rem;
+  top: 0;
+  width: 90px;
+}
+.item2{
+  background-color: var(--Very-dark-rayish-blue);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.item3{
+  background-color: var(--White);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.item4{
+  background-color: var(--Very-dark-blackish-blue);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.item5{
+  background-color: var(--White);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.flexbox{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.name-white{
+  display: grid;
+}
+.name-dark{
+  display: grid;
+}
+.name-white span{
+  color: var(--White);
+}
+.name-dark span{
+  color: var(--Very-dark-rayish-blue);
+}
+p.name-white{
+  color: hsl(0, 0%, 100%, 50%);
+}
+p.name-dark{
+  color: hsl(217, 19%, 35%, 50%);
+}
+.flexbox img{
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.first-white{
+  color: var(--White);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+.second-white{
+  color: hsl(0, 0%, 100%, 70%);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+  
+}
+.first-dark{
+  color: var(--Very-dark-rayish-blue);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+.second-dark{
+  color: hsl(217, 19%, 35%, 70%);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+}
+@media (min-width: 640px){
+  .testimonial-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1280px){
+  .testimonial-grid{
+    max-width: 1100px;
+    margin: 50px auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .item1{
+    grid-column: 1 / 3;
+  }
+  .item4{
+    grid-column: 2 / 4;
+  }
+  .item5{
+    grid-column: 4;
+    grid-row: 1 / 3;
+  }
+}
+
